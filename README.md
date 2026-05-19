@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Projet pédagogique](https://img.shields.io/badge/usage-p%C3%A9dagogique-blue)](./README.md)
-[![Projet pédagogique](https://img.shields.io/badge/production-never-red)](./README.md)
+[![Pas en prod](https://img.shields.io/badge/production-never-red)](./README.md)
 
 Application web de gestion des commandes de l'Antre des 418 Dragons — une auberge fantastique dont la carte compte exactement 418 références : potions, victuailles et breuvages des contrées lointaines.
 
