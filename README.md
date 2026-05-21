@@ -37,7 +37,7 @@ npx serve board/public -l 4182
 # ── Frontend React (alternative) ────────────────────────────────
 cd board-react && npm install
 npm run dev
-# Disponible sur http://localhost:4184
+# Disponible sur http://localhost:4182
 ```
 
 - Frontend : http://localhost:4182
@@ -63,7 +63,7 @@ L'application est intentionnellement fonctionnelle et complète pour que les ét
 | Service          | Rôle                | Port   | Techno                          |
 |------------------|---------------------|--------|---------------------------------|
 | `board`          | Frontend SPA        | `4182` | HTML / CSS / JS vanilla + nginx |
-| `board-react`    | Frontend SPA (React)| `4184` | React 18 + Vite + TypeScript    |
+| `board-react`    | Frontend SPA (React)| `4182` | React 18 + Vite + TypeScript    |
 | `cellar`         | Base de données     | `4183` | PostgreSQL 16                   |
 | `innkeeper`      | API REST (Node.js)  | `4181` | Node.js LTS + Express 4         |
 | `innkeeper-java` | API REST (Java)     | `4181` | Spring Boot 4 + Java 25         |
@@ -253,7 +253,7 @@ VITE_API_URL=http://localhost:4181
 ```bash
 cd board-react
 npm install
-npm run dev      # dev server sur http://localhost:4184
+npm run dev      # dev server sur http://localhost:4182
 npm run build    # build de production
 npm run test     # tests unitaires (Vitest + React Testing Library)
 ```
