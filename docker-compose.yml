@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+ # ---  PostgreSQL ---
+
+  cellar:
+    image: postgres:16-alpine
+    container_name: cellar
+    environment:
+      POSTGRES_USER: dragontap
+      POSTGRES_PASSWORD: dragontap
+      POSTGRES_DB: dragontap
+    volumes:
+      - cellar-data:/var/lib/postgresql/data
+      - ./cellar/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - dragontap-net
+
+  # --- BACKEND ---
+
+  innkeeper:
+    build: ./innkeeper
+    container_name: innkeeper
+    depends_on:
+      - cellar
+    environment:
+      DATABASE_URL: postgres://dragontap:dragontap@cellar:5432/dragontap
+      PORT: 4181
+    ports:
+      - "4181:4181"
+    networks:
+      - dragontap-net
+
+ # --- nginx ---
+  board:
+    build: ./board
+    container_name: board
+    depends_on:
+      - innkeeper
+    ports:
+      - "4182:4182"
+    networks:
+      - dragontap-net
+
+volumes:
+  cellar-data:
+
+networks:
+  dragontap-net:
+    driver: bridge
