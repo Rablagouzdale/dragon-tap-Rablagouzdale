@@ -7,8 +7,6 @@ Docker Desktop installé
 
 Docker Compose v2 (inclus dans Docker Desktop)
 
-Un OS compatible (Windows, macOS, Linux)
-
 ⚠️ Problèmes rencontrés :
 Éviter OneDrive sous Windows pour éviter les problèmes de permissions et de lecture de fichiers YAML
 Les conflits de noms de conteneurs
