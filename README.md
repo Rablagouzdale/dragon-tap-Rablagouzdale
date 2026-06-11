@@ -29,6 +29,7 @@ crée le volume cellar-data
 exécute le script cellar/init.sql si le volume est vide
 
 démarre les services dans le bon ordre (cellar → innkeeper → board)
+
     cellar base de données en PostGreSQL
 
     innkeeper c'est l'API backend
